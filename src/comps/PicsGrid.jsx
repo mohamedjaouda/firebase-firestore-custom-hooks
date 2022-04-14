@@ -7,8 +7,6 @@ import { motion } from 'framer-motion'
 const PicsGrid = ({ setSelectedImg }) => {
   const { docs } = useFireStore("images");
 
-  console.log(docs);
-
   return (
     <div className="grid">
       {docs &&
@@ -22,8 +20,8 @@ const PicsGrid = ({ setSelectedImg }) => {
           >
             <motion.img src={doc.url} alt="images"
                 initial={{opacity:0}}
-                animate={{opacity:0.9}}
-                transition={{delay:1.5}}
+                animate={{opacity:1}}
+                transition={{delay:0.9}}
             />
           </motion.div>
         ))}
