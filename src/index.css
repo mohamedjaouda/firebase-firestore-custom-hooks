@@ -28,7 +28,8 @@ body{
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.747);
+  backdrop-filter: blur(10px);  
   width: 100%;
   margin: 0 auto;
   padding: 0 12rem;
@@ -141,7 +142,10 @@ label:hover{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  width: 100%;
+  backdrop-filter: blur(3px);  
+  background-color: rgba(0, 0, 0, 0.747);
+
 }
 .backdrop img{
   display: block;
