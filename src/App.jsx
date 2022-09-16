@@ -10,14 +10,16 @@ const App = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
-    <div className="App">
+    <>
       <Title />
+    <div className="App">
       <UploadForm />
       <PicsGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
       )}
     </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import ProgressBar from '../comps/ProgressBar'
+import {RiImageAddLine} from "react-icons/ri";
 
 const UploadForm = () => {
 
@@ -24,7 +25,7 @@ const UploadForm = () => {
       <form>
         <label>
           <input type="file" onChange={handleUpload} />
-          <span className='add'>+</span>
+          <RiImageAddLine className='upload-icon' />
         </label>
         <div className="output">
           {error && <div className="error">{error}</div>}

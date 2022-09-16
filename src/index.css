@@ -6,41 +6,59 @@
   --error: #ff4a4a;
 }
 
-html{
-  background: rgb(202, 202, 202);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 
 /* base styles & title */
 body{
   font-family: 'Hind Madurai', sans-serif;
   color: var(--secondary);
+  background-color: #eeeeee;
 }
 .App{
   max-width: 960px;
   margin: 0 auto;
 }
+
+.title {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12rem;
+  box-shadow: 0 1px 10px 2px #b1b1b173;
+}
 .title h1{
   font-family: 'Spline Sans', sans-serif;
   color: var(--primary);
   width: 100%;
-  font-size: 250%;
+  font-size: 2rem;
   letter-spacing: -3px;
-  word-spacing: -3px;
-  border-bottom: 3px solid #15105a;
+  word-spacing: 3px;
 }
 
 .fire {
-  color: rgb(255, 145, 0);
+  color: rgb(255, 183, 74);
   font-size: 46px;
   font-weight: 400;
 }
 
-.title h2{
+.container {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-top: 60px;
-  font-size: 2.6rem;
+  margin: 6rem auto 0 auto;
+}
+
+.container h2{
+  color: #242424;
+  font-size: 3rem;
 }
 
 /* upload form styles */
@@ -50,25 +68,34 @@ form{
   text-align: center;
 }
 label input{
-  height: 0;
-  width: 0;
   opacity: 0;
 }
+
+.upload-icon {
+  position: relative;
+  bottom: 16px;
+  font-size: 1.9rem;
+}
+
 label{
   display: block;
   width: 60px;
-  height: 30px;
+  height: 60px;
   border: 2px solid var(--primary);
-  border-radius: 10%;
+  border-radius: 50px;
   margin: 10px auto;
   line-height: 30px;
   color: var(--primary);
   font-weight: bold;
   font-size: 24px;
+  transition: 0.1s ease-in-out;
 }
 label:hover{
   background: var(--primary);
+  transform: scale(0.9,0.9);
   color: white;
+  cursor: pointer;
+  box-shadow:  0 3px 5px 2px #3b354d79;
 }
 
 /* progress bar styles */
@@ -95,7 +122,7 @@ label:hover{
   position: relative;
   opacity: 0.8;
 }
-.img-wrap img{
+.img-wrap img {
   min-width: 100%;
   min-height: 50%;
   max-width: 50%;
@@ -103,6 +130,8 @@ label:hover{
   position: absolute;
   top: 0;
   left: 0;
+}.img-wrap img:hover {
+  cursor: pointer;
 }
 
 /* modal styles */
@@ -121,7 +150,18 @@ label:hover{
   margin: 60px auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+    .title {
+    padding: auto 0;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .title {
+    padding: 0;
+  }
+
   .grid {
     grid-template-columns: repeat(1, 1fr);
     width: 70%;
