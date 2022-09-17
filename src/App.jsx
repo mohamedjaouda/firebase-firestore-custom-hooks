@@ -12,12 +12,12 @@ const App = () => {
   return (
     <>
       <Title />
-    <div className="App">
+    <div className="container">
       <UploadForm />
       <PicsGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-      )}
+        )}
     </div>
     </>
   );

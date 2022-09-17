@@ -22,17 +22,20 @@ const UploadForm = () => {
         }
     };
     return (
-      <form>
-        <label>
-          <input type="file" onChange={handleUpload} />
-          <RiImageAddLine className='upload-icon' />
-        </label>
-        <div className="output">
-          {error && <div className="error">{error}</div>}
-          {file && <div>{file.name}</div>}
-          {file && <ProgressBar file={file} setFile={setFile} />}
-        </div>
-      </form>
+      <>
+        <h2>Upload Photo</h2>
+        <form>
+          <label>
+            <input type="file" onChange={handleUpload} />
+            <RiImageAddLine className="upload-icon" />
+          </label>
+          <div className="output">
+            {error && <div className="error">{error}</div>}
+            {file && <div>{file.name}</div>}
+            {file && <ProgressBar file={file} setFile={setFile} />}
+          </div>
+        </form>
+      </>
     );
 }
 
